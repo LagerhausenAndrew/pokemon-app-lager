@@ -1,0 +1,94 @@
+header {
+    background-color: red;
+    border-radius: 20px;
+}
+
+h1 {
+    font-family: "Pokemon";
+    color: yellow;
+    font-size: 100px;
+    -webkit-text-stroke: 3.75px blue; 
+    text-align: center;
+    margin: 0 auto;
+}
+
+body {
+    background-color: lightgray;
+}
+
+nav {
+    text-align: center;
+    font-family: 'Major Mono Display', monospace;
+}
+
+nav a {
+    text-decoration: none;
+    color: yellow;
+    font-size: 30px;
+    margin: 60px;
+}
+
+img {
+    border-radius: 20px;
+    border: solid black 5px;
+}
+
+a {
+    text-decoration: none;
+    color: yellow;
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+}
+
+form {
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Major Mono Display', monospace;
+}
+
+#Misty {
+    background-color: lightblue;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+#Brock {
+    background-color: darkgrey;
+    border-radius: 15px;
+    margin: 10px 0 0 10px;
+    margin: 10px;
+}
+
+#Ash {
+    background-color: yellow;
+    border-radius: 15px;
+    margin: 10px 0 0 10px;
+    margin: 10px;
+}
+
+#Andrew {
+    background-color: darkred;
+    border-radius: 15px;
+    margin: 10px 0 0 10px;
+    margin: 10px;
+}
+
+.data {
+    display: inline-block;
+    text-align: center;
+}
+
+#data {
+    text-align: center;
+}
+
+.pokemonName {
+    text-align: center;
+}
+
+.listOfPlayers {
+    font-family: 'Major Mono Display', monospace;
+}

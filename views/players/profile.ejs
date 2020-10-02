@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon" rel="stylesheet" type="text/css"/>
+    <!-- Font added from online website -->
+    <link rel="stylesheet" href="/css/app.css" />
+    <title>Pok&eacute;mon User Profile</title>
+</head>
+<body>
+    <header>
+        <h1>Pok&eacute;mon Profile!</h1>
+        <nav>
+            <a href="/pokemon">Check out the Pok&eacute;mon!</a>
+            <a href="/pokemon/new">Create a New Pok&eacute;mon</a>
+            <a href="/players">Sign Out</a>
+        </nav>
+    </header>
+    <form id="<%=player.name%>" action='/players/profile/<%=player.id%>?_method=PUT' method='POST'>
+        Name: <input type="text" name="name" value="<%=player.name%>" />
+    </br></br>
+        Username: <input type="text" name="username" value="<%=player.username%>" />
+    </br></br>
+        Password: <input type="text" name="password" value="<%=player.password%>" />
+    </br></br>
+        Favorite Pokemon: <input type="text" name="favoritePokemon" value="<%=player.favoritePokemon%>" />
+    </br></br>
+    Team: <select name="teamId">
+        <% for (let i=0; i<teams.length; i++) { %>
+            <option value=<%=teams[i].id%> > <%=teams[i].name%></option>
+        <% } %>
+    </select>
+    <br> <br>
+        Pokemon to catch! <select name="pokemonId">
+            <% for (let i=0; i<teams.length; i++) { %>
+                <option value=<%=pokemon[i].id%> > <%=pokemon[i].name%></option>
+            <% } %>
+        </select>
+    <br> <br>
+    <input type="submit" value="Edit Player Profile" />
+    </form>
+    <div class="listOfPlayers">
+        <h3>This player has these Pokemon!</h3>
+        <ul>
+        <% for(let i=0; i<player.Pokemons.length; i++) { %>
+            <li>
+                <%=player.Pokemons[i].name%>
+                <form action="/players/profile/<%=player.id%>/<%=player.Pokemons[i].id%>?_method=DELETE" method="POST">
+                    <input type="submit" value="Release Pokemon" />
+                </form>
+            </li>
+        <% } %>
+        </ul>
+    </div>
+    <form action='/players/profile/<%=player.id%>?_method=DELETE' method="POST">
+        <input type="submit" value="Delete Profile" />
+    </form>
+</body>
+</html>

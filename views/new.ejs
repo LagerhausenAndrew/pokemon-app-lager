@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New-Pok&eacute;mon</title>
+    <link href="//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon" rel="stylesheet" type="text/css"/>
+    <!-- Font added from online website -->
+    <link rel="stylesheet" href="/css/app.css" />
+</head>
+<body>
+    <header>
+        <h1>Create Your Own Pok&eacute;mon</h1>
+        <nav>
+            <a href="/pokemon">Check out the Pok&eacute;mon!</a>
+            <a href="/pokemon/new">Create a New Pok&eacute;mon</a>
+            <a href="/players/signUp">Create a New User!</a>
+            <a href="/players/logIn">Current User!</a>
+        </nav>
+    </header>
+    <form action="/pokemon" method=POST>
+        Pokemon Name: <input type="text" name="name" />
+        <br>
+        <br>
+        Imgage URL: <input type="text" name="img" />
+        <br>
+        <br>
+        <input type="submit" value="Create Your Pokemon!" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Pok&eacute;dex-Show</title>
+    <link href="//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon" rel="stylesheet" type="text/css"/>
+    <!-- Font added from online website -->
+    <link rel="stylesheet" href="/css/app.css" />
+</head>
+<body>
+    <header>
+        <h1>Edit Your Pok&eacute;mon!</h1>
+        <nav>
+            <a href="/pokemon/new">Create a New Pok&eacute;mon</a>
+        </nav>
+    </header>
+    <form action="/pokemon/<%=pokemon.id%>?_method=PUT" method="POST">
+        Pokemon Name: <input type="text" name="name" value="<%=pokemon.name%>" />
+        <br>
+        <br>
+        Image URL: <input type="text" name="img" value="<%=pokemon.img%>" />
+        <br>
+        <br>
+        Type: <input type="text" name="type" value="<%=pokemon.type%>" />
+        <br>
+        <br>
+        Strong Against: <input type="text" name="strongAgainst" value="<%=pokemon.strongAgainst%>" />
+        <br>
+        <br>
+        Weak Against: <input type="text" name="weakAgainst" value="<%=pokemon.weakAgainst%>" />
+        <br>
+        <br>
+        <input type="submit" value="Submit!" />
+    </form>
+</body>
+</html>

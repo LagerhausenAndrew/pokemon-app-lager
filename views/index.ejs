@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pok&eacute;dex</title>
+    <link href="//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon" rel="stylesheet" type="text/css"/>
+    <!-- Font added from online website -->
+    <link rel="stylesheet" href="/css/app.css" />
+</head>
+<body>
+    <header>
+        <h1>Pok&eacute;mon</h1>
+        <nav>
+            <a href="/pokemon/new">Create a New Pok&eacute;mon</a>
+            <a href="/players/signUp">Create a New User!</a>
+            <a href="/players/logIn">Current User!</a>
+        </nav>
+    </header>
+    <ul class="pokemon">
+        <%for (i=0; i<pokemon.length; i++) { %>
+            <li>
+                <a href="/pokemon/<%=pokemon[i].id%>"><%=pokemon[i].name%></a>
+            </br></br>
+            </li>
+        <% } %>
+    </ul>
+</body>
+</html>

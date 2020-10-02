@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon" rel="stylesheet" type="text/css"/>
+    <!-- Font added from online website -->
+    <link rel="stylesheet" href="/css/app.css" />
+    <title>Pok&eacute;mon User Sign Up</title>
+</head>
+<body>
+    <header>
+        <h1>Pok&eacute;mon User Sign Up!</h1>
+        <nav>
+            <a href="/pokemon">Check out the Pok&eacute;mon!</a>
+            <a href="/pokemon/new">Create a New Pok&eacute;mon</a>
+        </nav>
+    </header>
+    <form action='/players/profile' method='POST'>
+        Name: <input type="text" name='name' />
+        </br>
+        </br>
+        Username: <input type="text" name='username' />
+        </br>
+        </br>
+        Password: <input type="text" name='password' />
+        </br>
+        </br>
+        Favorite Pokemon: <input type="text" name='favoritePokemon' />
+        </br>
+        </br>
+        <input type="submit" value="Go Catch Em All" />
+    </form>
+</body>
+</html>
